@@ -8,6 +8,8 @@ Install `npm` and `Node.js`, then run:
 
 `
 $ npm install
+`
+`
 $ npm start
 `
 
@@ -41,7 +43,6 @@ To view available users, please view [users.json](/public/json/users.json)
 ### Design/Evaluation Achievements
 
 - **Login Page**: Designed the login page using Bootstrap
-
 - **Footer Design**: Designed the color of the footer and re-defined the anchor element
 - **Table Design**: Used the table from bootstrap and tweaked it to make it fit the whole theme
 - **Gradient transparent background**: The top background image is gradient transparent which seems really cool
