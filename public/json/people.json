@@ -1,5 +1,48 @@
 [
-    { "name": "Jhon Lee", "birthday": "1998-03-27", "major": "CS", "age": 21 },
-    { "name": "Akali Smith", "birthday": "1999-05-21", "major": "CS", "age": 20 },
-    { "name": "Iris Five", "birthday": "2000-08-29", "major": "CS", "age": 19 }
+  {
+    "user": "user",
+    "people": [
+      {
+        "name": "test1",
+        "birthday": "2008-01-01",
+        "major": "CS",
+        "age": 11
+      },
+      {
+        "name": "test2",
+        "birthday": "1997-01-01",
+        "major": "CS",
+        "age": 22
+      },
+      {
+        "name": "Test3",
+        "birthday": "1986-01-01",
+        "major": "BCB",
+        "age": 33
+      }
+    ]
+  },
+  {
+    "user": "rui",
+    "people": [
+      {
+        "name": "Jhon Lee",
+        "birthday": "1998-03-27",
+        "major": "CS",
+        "age": 21
+      },
+      {
+        "name": "Akali Smith",
+        "birthday": "1999-05-21",
+        "major": "CS",
+        "age": 20
+      },
+      {
+        "name": "Iris Five",
+        "birthday": "2000-08-29",
+        "major": "CS",
+        "age": 19
+      }
+    ]
+  }
 ]

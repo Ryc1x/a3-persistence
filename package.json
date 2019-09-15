@@ -4,9 +4,17 @@
   "description": "WPI CS 4241 second assignment",
   "author": "Rui Huang",
   "scripts": {
-    "start": "node server.improved.js"
+    "start": "node server.js"
   },
   "dependencies": {
-    "mime": "^2.4.4"
+    "cookie-parser": "~1.4.4",
+    "express": "~4.16.1",
+    "express-session": "~1.16.2",
+    "serve-favicon": "~2.5.0",
+    "http-errors": "~1.6.3",
+    "lowdb": "~1.0.0",
+    "morgan": "~1.9.1",
+    "passport": "~0.4.0",
+    "passport-local": "~1.0.0"
   }
 }

@@ -88,3 +88,16 @@ body {
 #footer a:hover {
     color: #fff;
 }
+
+#modify-group {
+    display: none;
+    text-align: center;
+}
+
+#modify-btn-group {
+    display: flex;
+}
+
+#people-form td {
+    display: flex;
+}

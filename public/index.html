@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
-    <title>CS4241 Assignment 2</title>
+    <title>CS4241 Assignment 3</title>
 </head>
 
 <body>
@@ -36,6 +36,7 @@
                     <a class="nav-link" href="#footer">Footer</a>
                 </li>
             </ul>
+            <a class="btn btn-light" href="/login.html">Back to Login</a>
         </div>
     </nav>
 
@@ -43,10 +44,9 @@
     <div id='background'>
     </div>
 
-
     <div class="content">
         <div id="namebox">
-            Silly Name Book
+            Better Name Book
         </div>
         <div id="handwritten">Rui Huang</div>
         <div class="row">
@@ -54,7 +54,7 @@
                 <div class="avatar center-block"> </div>
 
                 <form id="add-form">
-                    <h3>Add a person to the table</h3>
+                    <h3 id="form-title">Add a person to the table</h3>
                     <div class="form-group">
                         <label for="input-name">Name</label>
                         <input type="text" class="form-control" id="input-name" placeholder="Name">
@@ -70,26 +70,16 @@
                         </select>
                     </div>
                     <button id='add-row-btn' type="submit" class="btn btn-primary center-block">Submit</button>
+                    <div id="modify-group">
+                        Modifying: <b id="modify-id">0</b>
+                        <div id="modify-btn-group">
+                            <button id='modify-row-btn' type="submit"
+                                class="btn btn-primary center-block">Confirm</button>
+                            <button id='cancel-modify-btn' type="submit"
+                                class="btn btn-warning center-block">Cancel</button>
+                        </div>
+                    </div>
                 </form>
-
-                <!--  NOT IMPLEMENTED
-                <form id="modify-form">
-                    <h3>Modify a row in the table</h3>
-                    <div class="form-group">
-                        <label for="input-name">Name</label>
-                        <input type="text" class="form-control" id="input-name" placeholder="Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="input-birthday">Date of Birth</label>
-                        <input type="date" class="form-control" id="input-birthday" placeholder="Password">
-                    </div>
-                    <div class="form-group">
-                        <label for="select-major">Major</label>
-                        <select class="form-control" id="select-major">
-                        </select>
-                    </div>
-                    <button id='add-row-btn' type="submit" class="btn btn-warning center-block">Confirm</button>
-                </form> -->
             </div>
             <div class="col-sm-9">
                 <table class="table table-striped" id="people-table">
@@ -100,7 +90,7 @@
                             <th scope="col">Date of Birth</th>
                             <th scope="col">Major</th>
                             <th scope="col">Age</th>
-                            <th scope="col">operation</th>
+                            <th scope="col">Operation</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -120,7 +110,7 @@
             &copy; 2019 - Rui Huang
         </p>
         <p>
-            <a href="https://github.com/Ryc1x/a2-shortstack">Git Repo</a>
+            <a href="https://github.com/Ryc1x/a3-persistence">Git Repo</a>
         </p>
     </div>
     <!-- Go top -->

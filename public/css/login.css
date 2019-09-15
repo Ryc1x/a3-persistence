@@ -1,0 +1,13 @@
+body {
+    background: #eaeaea
+}
+
+#login-box {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+#login-form {
+    width: 500px;
+}
