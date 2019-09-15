@@ -1,10 +1,14 @@
 [
-    {
-        "username": "rui",
-        "password": "ruii"
-    },
-    {
-        "username": "user",
-        "password": "pass"
-    }
+  {
+    "username": "rui",
+    "password": "ruii"
+  },
+  {
+    "username": "user",
+    "password": "pass"
+  },
+  {
+    "username": "iris",
+    "password": "iris"
+  }
 ]

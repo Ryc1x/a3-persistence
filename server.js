@@ -95,12 +95,26 @@ app.post(
     }
 )
 
+app.post('/register', function (req, res) {
+    let data = req.body
+    if (user_db.find({ 'username': data.username}).value() != undefined){
+        res.sendStatus(409)
+    } else {
+        user_db.push(data).write()
+        db.push({
+            "user": data.username,
+            "people": []
+        }).write()
+        res.sendStatus(200)
+    }
+})
+
 app.get('/people', function (req, res) {
-    let user = req.user.username
-    if (user === undefined) {
-        res.redirect(401,'/login.html')
+    if (req.user === undefined) {
+        res.redirect(401, '/login.html')
     }
     else {
+        let user = req.user.username
         res.set('Content-Type', 'application/json');
         res.send(db.find({ 'user': user }).get('people').value());
     }
@@ -108,11 +122,11 @@ app.get('/people', function (req, res) {
 
 app.post('/person', function (req, res) {
     console.log('Cookies: ', req.cookies)
-    let user = req.user.username
-    if (user === undefined) {
-        res.redirect(401,'/login.html')
+    if (req.user === undefined) {
+        res.redirect(401, '/login.html')
     }
     else {
+        let user = req.user.username
         let data = req.body
         data.age = _calculateAge(data.birthday);
         console.log(data)
@@ -121,12 +135,12 @@ app.post('/person', function (req, res) {
     }
 })
 
-app.post('/person/:id', function (req, res){
-    let user = req.user.username
-    if (user === undefined) {
-        res.redirect(401,'/login.html')
+app.post('/person/:id', function (req, res) {
+    if (req.user === undefined) {
+        res.redirect(401, '/login.html')
     }
     else {
+        let user = req.user.username
         let data = req.body
         console.log(data)
         data.age = _calculateAge(data.birthday);
@@ -136,11 +150,11 @@ app.post('/person/:id', function (req, res){
 })
 
 app.delete('/person/:id', function (req, res) {
-    let user = req.user.username
-    if (user === undefined) {
-        res.redirect(401,'/login.html')
+    if (req.user === undefined) {
+        res.redirect(401, '/login.html')
     }
     else {
+        let user = req.user.username
         db.find({ 'user': user }).get('people').pullAt(req.params.id).write()
         res.sendStatus(200)
     }

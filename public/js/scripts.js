@@ -183,5 +183,7 @@ const updateTableContent = function () {
             );
         })
         return data
+    }).catch(function (err){
+        console.log(err)
     })
 }

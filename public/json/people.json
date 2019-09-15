@@ -44,5 +44,22 @@
         "age": 19
       }
     ]
+  },
+  {
+    "user": "iris",
+    "people": [
+      {
+        "name": "rui",
+        "birthday": "1991-01-01",
+        "major": "CS",
+        "age": 28
+      },
+      {
+        "name": "iris",
+        "birthday": "1995-05-05",
+        "major": "MAC",
+        "age": 24
+      }
+    ]
   }
 ]
